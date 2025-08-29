@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BlogTalks Design System - Modern gradient blog theme */
+
+@layer base {
+  :root {
+    /* Light purple theme colors */
+    --background: 320 50% 98%; /* Light purple background */
+    --foreground: 260 15% 15%; /* Dark purple text */
+
+    --card: 320 40% 95%; /* Light purple cards */
+    --card-foreground: 260 15% 15%;
+
+    --popover: 320 50% 98%;
+    --popover-foreground: 260 15% 15%;
+
+    --primary: 280 100% 70%; /* Bright purple */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 290 60% 85%; /* Light purple secondary */
+    --secondary-foreground: 260 15% 15%;
+
+    --muted: 270 20% 65%; /* Muted purple */
+    --muted-foreground: 270 20% 45%;
+
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 122 39% 49%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 320 30% 85%; /* Light purple borders */
+    --input: 320 30% 90%;
+    --ring: 280 100% 70%;
+
+    --radius: 0.75rem;
+
+    /* Purple gradients */
+    --gradient-card: linear-gradient(135deg, hsl(320, 40%, 95%), hsl(310, 50%, 90%));
+    --gradient-primary: linear-gradient(135deg, hsl(280, 100%, 70%), hsl(290, 80%, 75%));
+    --card-shadow: 0 4px 12px rgba(147, 51, 234, 0.2);
+  }
+
+  .dark {
+    /* Dark black/blue theme with shiny purple accents */
+    --background: 220 30% 8%; /* Very dark blue-black */
+    --foreground: 280 15% 90%; /* Light purple-white text */
+
+    --card: 220 25% 12%; /* Dark blue-black cards */
+    --card-foreground: 280 15% 90%;
+
+    --popover: 220 30% 8%;
+    --popover-foreground: 280 15% 90%;
+
+    --primary: 280 100% 80%; /* Shiny bright purple */
+    --primary-foreground: 220 30% 8%;
+
+    --secondary: 270 60% 25%; /* Dark purple secondary */
+    --secondary-foreground: 280 15% 90%;
+
+    --muted: 250 15% 40%; /* Muted purple-gray */
+    --muted-foreground: 250 15% 60%;
+
+    --accent: 280 100% 80%; /* Shiny purple accent */
+    --accent-foreground: 220 30% 8%;
+
+    --destructive: 0 70% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 122 39% 49%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 240 20% 20%; /* Dark blue-purple borders */
+    --input: 240 20% 15%;
+    --ring: 280 100% 80%;
+
+    /* Dark gradients with shiny purple */
+    --gradient-card: linear-gradient(135deg, hsl(220, 25%, 12%), hsl(240, 30%, 18%));
+    --gradient-primary: linear-gradient(135deg, hsl(280, 100%, 80%), hsl(270, 90%, 75%));
+    --card-shadow: 0 4px 20px rgba(167, 120, 240, 0.4);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted;
+  }
+}
